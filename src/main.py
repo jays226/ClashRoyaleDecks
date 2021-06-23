@@ -12,13 +12,15 @@ app = Flask('decks')
 
 players = {}
 
+TOKEN = "" # A clash royale dev token with 128.128.128.128 whitelisted for dynamic IP usage
+
 async def getClan(name):
     url = f"https://proxy.royaleapi.dev/v1/clans?name={name}"
 
     payload = "%7B%20%22payload%22=%22%22%2C%20%22signature%22%3A%20%22%22%20%7D"
     headers = {
         'content-type': "application/json",
-        'authorization': "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6ImYzZGE2ZGJhLWMxMTQtNDI2Zi05NjNhLWMyZWIxYjhmZjIzOSIsImlhdCI6MTYyNDMzOTQyNCwic3ViIjoiZGV2ZWxvcGVyL2FkZjcwNWRjLWY2M2EtYWYyOC03ZjgwLWMzNDhjMDcxM2ZmMyIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIxMjguMTI4LjEyOC4xMjgiXSwidHlwZSI6ImNsaWVudCJ9XX0.BTqbkt6aUL_F2F9DAJCYH2u0zwABtlSCMypBWnYEosPNowQFZujeljcNe39mPzSPOeVA-tHqQoylPNzh85kDNA",
+        'authorization': f"Bearer {TOKEN}",
         }
     
     async with aiohttp.ClientSession() as client:
@@ -33,7 +35,7 @@ async def getClan(name):
     payload = "%7B%20%22payload%22=%22%22%2C%20%22signature%22%3A%20%22%22%20%7D"
     headers = {
         'content-type': "application/json",
-        'authorization': "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6ImYzZGE2ZGJhLWMxMTQtNDI2Zi05NjNhLWMyZWIxYjhmZjIzOSIsImlhdCI6MTYyNDMzOTQyNCwic3ViIjoiZGV2ZWxvcGVyL2FkZjcwNWRjLWY2M2EtYWYyOC03ZjgwLWMzNDhjMDcxM2ZmMyIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIxMjguMTI4LjEyOC4xMjgiXSwidHlwZSI6ImNsaWVudCJ9XX0.BTqbkt6aUL_F2F9DAJCYH2u0zwABtlSCMypBWnYEosPNowQFZujeljcNe39mPzSPOeVA-tHqQoylPNzh85kDNA",
+        'authorization': f"Bearer {TOKEN}",
         }
 
     async with aiohttp.ClientSession() as client:
@@ -64,7 +66,7 @@ async def getPlayerCards(PlayerTag):
         payload = "%7B%20%22payload%22=%22%22%2C%20%22signature%22%3A%20%22%22%20%7D"
         headers = {
             'content-type': "application/json",
-            'authorization': "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6ImYzZGE2ZGJhLWMxMTQtNDI2Zi05NjNhLWMyZWIxYjhmZjIzOSIsImlhdCI6MTYyNDMzOTQyNCwic3ViIjoiZGV2ZWxvcGVyL2FkZjcwNWRjLWY2M2EtYWYyOC03ZjgwLWMzNDhjMDcxM2ZmMyIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIxMjguMTI4LjEyOC4xMjgiXSwidHlwZSI6ImNsaWVudCJ9XX0.BTqbkt6aUL_F2F9DAJCYH2u0zwABtlSCMypBWnYEosPNowQFZujeljcNe39mPzSPOeVA-tHqQoylPNzh85kDNA",
+            'authorization': f"Bearer {TOKEN}",
             }
 
         async with aiohttp.ClientSession() as client:
