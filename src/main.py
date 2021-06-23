@@ -71,8 +71,6 @@ async def getPlayerCards(PlayerTag):
           async with client.get(url=url, headers=headers, data=payload) as r:
             data = await r.json()
 
-        with open('data.json', 'w') as f:
-            json.dump(data, f)
         deck_raw = data['currentDeck']
 
         player = {}
