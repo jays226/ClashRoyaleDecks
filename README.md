@@ -5,5 +5,5 @@ An original project to easily access player's profiles by NAME. This is much eas
 Go to https://decks.atomicxyz.tk to use the service!
 
 ## Credits
-Created by AtomicXYZ
+Created by AtomicXYZ<br>
 Proxy by RoyaleAPI.com
