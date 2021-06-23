@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en" class="h-100">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, 
+user-scalable=no">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@490&display=swap" rel="stylesheet">
+<style type = "text/css">
+body {
+      text-align: center;
+      background-image: url("https://media.discordapp.net/attachments/836446331992145950/836737901759954964/beautiful-color-ui-gradients-backgrounds-cherry.png");
+      background-size: cover;
+      background-position: center, center;
+}
+.button2 {
+    color: rgb(255, 255, 255) !important;
+    font-size: 50px;
+    text-decoration: none;
+    background: #00a2ff;
+    padding: 20px;
+    border-radius: 25px;
+    display: inline-block;
+    border: none;
+    transition: all 1s ease 0s;
+    margin:15px;
+}
+.button {
+    color: rgb(255, 255, 255) !important;
+    font-size: 4vw;
+    text-decoration: none;
+    background: #00a2ff;
+    padding: 20px;
+    border-radius: 25px;
+    display: inline-block;
+    border: none;
+    transition: all 1s ease 0s;
+    margin:15px;
+}
+.button2:hover {
+    background: #434343;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+}
+.button:hover {
+    background: #434343;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+}
+
+.input{
+  padding: 6px;
+  border: none;
+  font-size: 4vw;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+    
+</style>
+</head>
+
+<title>Clash Royale Player Decks</title>
+<body class= "center" style="font-family: archivo, sans-serif;font-size:30px;color:white" data-new-gr-c-s-check-loaded="14.1008.0" data-gr-ext-installed="">
+
+
+<h1 class = "margin2" style="font-size:6vw" >Clash Royale Player Decks</h1>
+
+<h1 style="font-size:4vw" >Search with Player Name or Tag</h1>
+
+<form action="{{ url_for("index")}}" method="post">
+<input class = "input" type="text" id="playername" name="name" placeholder="Search a player...">
+<button class = "button" type="submit">Search</button>
+</form>
+
+<h1 style="font-size:4vw" >Search with Clan Name</h1>
+
+<form action="{{ url_for("clans")}}" method="post">
+<input class = "input" type="text" id="clanname" name="clan" placeholder="Search a clan...">
+<button class = "button" type="submit">Search</button>
+</form>
+
+</body>
+</div>
+</html>
